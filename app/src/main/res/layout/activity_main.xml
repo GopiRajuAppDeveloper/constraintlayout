@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#D7D8C4"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="#F4E3E3">
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/tv_color">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logo"
+/>
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Lacey Fermandez"
+                android:textColor="#fff"
+                />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fcfcfc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/tv1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="SIG IN"
+                android:textColor="#000"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/tv_back"
+                android:drawableStart="@drawable/person"
+                android:paddingLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv1_name"></EditText>
+
+            <EditText
+                android:id="@+id/ll_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/tv_back"
+                android:drawableStart="@drawable/email"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_name"></EditText>
+
+            <CheckBox
+                android:id="@+id/raju"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Remember me"
+                app:layout_constraintStart_toStartOf="@id/ll_email"
+                app:layout_constraintTop_toBottomOf="@+id/ll_email" />
+
+            <TextView
+                android:id="@+id/tv1222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="20dp"
+                android:text="Forgot password"
+                android:textColor="@color/tv_color"
+                app:layout_constraintEnd_toEndOf="@id/ll_email"
+                app:layout_constraintStart_toEndOf="@id/raju"
+                app:layout_constraintTop_toBottomOf="@id/ll_email" />
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ll_background"
+                android:text="Sign In"
+                app:layout_constraintTop_toBottomOf="@id/raju"
+                tools:layout_editor_absoluteX="24dp" />
+
+            <TextView
+                android:id="@+id/still"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="still not connected?"
+                app:layout_constraintStart_toStartOf="@id/button"
+                app:layout_constraintTop_toTopOf="@+id/signup" />
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:text="Sign up"
+                android:textColor="@color/tv_color"
+                app:layout_constraintStart_toEndOf="@id/still"
+                app:layout_constraintTop_toBottomOf="@+id/button" />
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/button"
+                app:layout_constraintTop_toBottomOf="@id/still" />
+
+            <TextView
+                android:id="@+id/tv_or"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/tv_back"
+                android:text="or"
+                app:layout_constraintBottom_toBottomOf="@+id/et1"
+                app:layout_constraintEnd_toStartOf="@id/et2"
+                app:layout_constraintStart_toEndOf="@+id/et1" />
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/et1"
+                app:layout_constraintEnd_toEndOf="@id/button"
+                app:layout_constraintStart_toStartOf="@id/tv_or"
+                app:layout_constraintTop_toTopOf="@+id/et1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/fb"
+                app:layout_constraintEnd_toEndOf="@id/iv2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/iv2"
+                app:layout_constraintStart_toStartOf="@id/button"
+                app:layout_constraintTop_toBottomOf="@id/et1" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/twiter"
+                app:layout_constraintBottom_toBottomOf="@+id/iv1"
+                app:layout_constraintEnd_toEndOf="@id/button"
+                app:layout_constraintStart_toStartOf="@id/iv1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
